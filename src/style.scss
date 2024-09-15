@@ -1,0 +1,51 @@
+// 1. color
+$primary-color: #177cb0;
+$secondary-color: #494166;
+$alert-color: #9D2932;
+$warning-color: #d9b612;
+$success-color: #789262;
+$dark-color: #a88462;
+$light-color: #efdeb0;
+
+// 2. font
+$base-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$base-font-size: 16px;
+$heading-font-family: 'Georgia', serif;
+
+body {
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: 1.5;
+}
+
+// 3. reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// 4. mixins
+// @mixin respond-to($media) {
+//   @if $media == 'phone' {
+//     @media (max-width: 600px) { @content; }
+//   } @else if $media == 'tablet' {
+//     @media (max-width: 900px) { @content; }
+//   }
+// }
+
+@mixin button-variant($bg-color) {
+  background-color: $bg-color;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  &:hover {
+    background-color: lighten($bg-color, 10%);
+  }
+}
+
+// 7. 响应式
+// $breakpoints: (
+//   'small': 480px,
+//   'medium': 768px,
+//   'large': 1024px
+// );
